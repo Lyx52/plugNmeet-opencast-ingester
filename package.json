@@ -4,9 +4,10 @@
   "description": "PlugNmeet-Recorder Post processing script that ingests recordings into Opencast",
   "main": "src/index.ts",
   "scripts": {
-    "build": "rm -rf ./dist && tsc -p . --outDir ./dist",
+    "build:linux": "rm -rf ./dist && tsc -p . --outDir ./dist",
+    "build:win": "rmdir /s/q .\\dist && tsc -p . --outDir .\\dist",
     "start": "npm run build && node ./dist/index.js",
-    "dev": "ts-node-dev src/index.ts"
+    "start:dev": "ts-node-dev src/index.ts"
   },
   "keywords": [
     "opencast",
